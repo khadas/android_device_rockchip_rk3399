@@ -1,0 +1,30 @@
+on property:sys.boot_completed=1
+    chown system system /sys/class/devfreq/ffa30000.rogue-g6110/governor
+    chown system system /sys/class/devfreq/ffa30000.rogue-g6110/min_freq
+    chown system system /sys/class/devfreq/ffa30000.rogue-g6110/max_freq
+
+on early-boot
+    # Update dm-verity state and set partition.*.verified properties
+    verity_update_state
+
+on boot
+    chown system system /sys/class/thermal/thermal_zone0/policy
+    chown system system /sys/class/thermal/thermal_zone1/policy
+    chown system system /sys/class/thermal/thermal_zone2/policy
+    
+    # update cpusets feature nodes for rk3368 tablet
+    write /dev/cpuset/foreground/cpus 0-7
+    write /dev/cpuset/foreground/boost/cpus 0-7
+    write /dev/cpuset/background/cpus 3
+    write /dev/cpuset/system-background/cpus 0-3
+    write /dev/cpuset/top-app/cpus 0-7
+
+    # reduce schedul time to improve io performance
+    write /sys/kernel/debug/sched_features NO_ENERGY_AWARE
+
+on init
+    # Load persistent dm-verity state
+    verity_load_state
+
+    chown root root /sys/class/devfreq/dmc/system_status
+    chmod 0666 /sys/class/devfreq/dmc/system_status
