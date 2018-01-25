@@ -13,6 +13,5 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-add_lunch_combo rk3368-userdebug
-add_lunch_combo rk3368-user
-add_lunch_combo rk3368_box-userdebug
+add_lunch_combo rk3399-userdebug
+add_lunch_combo rk3399-user

@@ -15,7 +15,7 @@
 #
 
 # Use the non-open-source parts, if they're present
--include vendor/rockchip/rk3368/BoardConfigVendor.mk
+-include vendor/rockchip/rk3399/BoardConfigVendor.mk
 -include device/rockchip/common/BoardConfig.mk
 
 TARGET_ARCH := arm64
@@ -29,16 +29,17 @@ TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53
+TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 
 TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
-PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3368/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3399/overlay
 
 
 # Disable emulator for "make dist" until there is a 64-bit qemu kernel
 BUILD_EMULATOR := false
-TARGET_BOARD_PLATFORM := rk3368
-TARGET_BOARD_PLATFORM_GPU := G6110
+
+TARGET_BOARD_PLATFORM := rk3399
+TARGET_BOARD_PLATFORM_GPU := mali-t860
 BOARD_USE_DRM := true
 
 # RenderScript
@@ -49,6 +50,7 @@ BOARD_OVERRIDE_RS_CPU_VARIANT_64 := cortex-a53
 
 TARGET_USES_64_BIT_BCMDHD := true
 TARGET_USES_64_BIT_BINDER := true
+# BOARD_USE_AFBC_LAYER := true
 
 # HACK: Build apps as 64b for volantis_64_only
 ifneq (,$(filter ro.zygote=zygote64, $(PRODUCT_DEFAULT_PROPERTY_OVERRIDES)))
@@ -57,12 +59,14 @@ TARGET_SUPPORTS_64_BIT_APPS := true
 endif
 
 # Sensors
-BOARD_SENSOR_ST := true
+BOARD_SENSOR_ST := false
 BOARD_SENSOR_MPU_VR := false
-BOARD_SENSOR_MPU_PAD := false
+BOARD_SENSOR_MPU_PAD := true
 
 BOARD_USES_GENERIC_INVENSENSE := false
 
+# GPU MaliT860 support opengl aep
+BOARD_OPENGL_AEP := true
 
 ifneq ($(filter %box, $(TARGET_PRODUCT)), )
 TARGET_BOARD_PLATFORM_PRODUCT ?= box
@@ -96,9 +100,9 @@ PRODUCT_HAVE_OPTEE ?= false
 BOARD_USE_SPARSE_SYSTEM_IMAGE := true
 
 # Google Service and frp overlay
-BUILD_WITH_GOOGLE_MARKET := true
+BUILD_WITH_GOOGLE_MARKET := false
 BUILD_WITH_GOOGLE_MARKET_ALL := false
-BUILD_WITH_GOOGLE_FRP := true
+BUILD_WITH_GOOGLE_FRP := false
 
 # Add widevine support
 BUILD_WITH_WIDEVINE := true

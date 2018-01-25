@@ -13,29 +13,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
-include device/rockchip/rk3368/rk3368_box/BoardConfig.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+include device/rockchip/rk3399/BoardConfig.mk
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/rockchip/rk3368/rk3368_box/product.mk)
+$(call inherit-product, device/rockchip/rk3399/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
 
-#TODO TV?
-PRODUCT_CHARACTERISTICS := tv
+PRODUCT_CHARACTERISTICS := tablet
 
-PRODUCT_NAME := rk3368_box
-PRODUCT_DEVICE := rk3368_box
-PRODUCT_MODEL := rk3368-box
+PRODUCT_NAME := rk3399
+PRODUCT_DEVICE := rk3399
 PRODUCT_BRAND := Android
+PRODUCT_MODEL := rk3399
 PRODUCT_MANUFACTURER := rockchip
 
-PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := tvdpi
+PRODUCT_PACKAGES += \
+    SoundRecorder
 
-#PRODUCT_PROPERTY_OVERRIDES += \
+# Get the long list of APNs
+PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/spn-conf.xml
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.version = 1.0.0 \
     ro.product.ota.host = www.rockchip.com:2300
 
-PRODUCT_HAVE_OPTEE := true
-# TV Input HAL
-PRODUCT_PACKAGES += \
-    android.hardware.tv.input@1.0-impl
+#PRODUCT_HAVE_OPTEE := true

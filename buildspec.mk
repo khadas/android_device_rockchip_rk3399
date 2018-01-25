@@ -21,16 +21,16 @@
 # "buildspec.mk" should never be checked in to source control.
 ######################################################################
 
-TARGET_BOARD_PLATFORM ?= rk3368
-TARGET_BOARD_PLATFORM_GPU ?= G6110
+TARGET_BOARD_PLATFORM ?= rk3399
+TARGET_BOARD_PLATFORM_GPU ?= mali-t860
 
 # Choose a product to build for.  Look in the products directory for ones
 # that work.
 ifndef TARGET_PRODUCT
-TARGET_PRODUCT:=rk3368
+TARGET_PRODUCT:=rk3399
 endif
 ifndef TARGET_DEVICE
-TARGET_DEVICE:=rk3368
+TARGET_DEVICE:=rk3399
 endif
 
 # Choose a variant to build.  If you don't pick one, the default is eng.
