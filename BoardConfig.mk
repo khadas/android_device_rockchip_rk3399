@@ -29,7 +29,7 @@ TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-TARGET_2ND_CPU_VARIANT := cortex-a53.a57
+TARGET_2ND_CPU_VARIANT := cortex-a15
 
 TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
 PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3399/overlay
@@ -108,10 +108,12 @@ BUILD_WITH_GOOGLE_FRP := false
 BUILD_WITH_WIDEVINE := true
 
 # camera enable
-BOARD_CAMERA_SUPPORT := true
+BOARD_CAMERA_SUPPORT := false
 ALLOW_MISSING_DEPENDENCIES=true
 
 #Config omx to support codec type.
 BOARD_SUPPORT_VP9 := false
 BOARD_SUPPORT_VP6 := false
 
+#for camera autofocus support
+CAMERA_SUPPORT_AUTOFOCUS=true

@@ -20,12 +20,14 @@ $(call inherit-product, device/rockchip/rk3399/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
 
 PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_SHIPPING_API_LEVEL :=25
 
 PRODUCT_NAME := rk3399
 PRODUCT_DEVICE := rk3399
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := rk3399
 PRODUCT_MANUFACTURER := rockchip
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PACKAGES += \
     SoundRecorder
@@ -35,6 +37,7 @@ PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/spn-conf.xml
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.version = 1.0.0 \
-    ro.product.ota.host = www.rockchip.com:2300
+    ro.product.ota.host = www.rockchip.com:2300 \
+    ro.sf.lcd_density=240
 
 #PRODUCT_HAVE_OPTEE := true
