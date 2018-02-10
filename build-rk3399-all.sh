@@ -46,7 +46,7 @@ DEVICE=`get_build_var TARGET_PRODUCT`
 BUILD_VARIANT=`get_build_var TARGET_BUILD_VARIANT`
 UBOOT_DEFCONFIG=rk3399_defconfig
 KERNEL_DEFCONFIG=rockchip_defconfig
-KERNEL_DTS=rk3399-mid-818-android
+KERNEL_DTS=rk3399-sapphire-excavator-edp
 PACK_TOOL_DIR=RKTools/linux/Linux_Pack_Firmware
 IMAGE_PATH=rockdev/Image-$TARGET_PRODUCT
 export PROJECT_TOP=`gettop`
@@ -82,7 +82,7 @@ else
     exit 1
 fi
 
-lunch rk3399_mid-userdebug
+lunch rk3399_all-userdebug
 
 # build wifi driver ko
 if [ -f "device/rockchip/common/build_wifi_ko.sh" ]; then

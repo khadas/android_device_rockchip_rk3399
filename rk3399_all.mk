@@ -14,16 +14,14 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(LOCAL_PATH)/rk3399_64.mk)
+$(call inherit-product, $(LOCAL_PATH)/rk3399.mk)
 
-PRODUCT_NAME := rk3399_laptop
-PRODUCT_DEVICE := rk3399_laptop
-PRODUCT_MODEL := rk3399-laptop
+PRODUCT_NAME := rk3399_all
+PRODUCT_DEVICE := rk3399_all
+PRODUCT_MODEL := rk3399-all
 
-TARGET_BOARD_PLATFORM_PRODUCT := laptop
-
-PRODUCT_AAPT_CONFIG := normal large hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := tvdpi
+PRODUCT_AAPT_CONFIG := normal large mdpi tvdpi hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_SYSTEM_VERITY := true
 
@@ -31,6 +29,8 @@ PRODUCT_SYSTEM_VERITY := true
 ifneq ($(TARGET_BUILD_VARIANT),user)
 MIXIN_DEBUG_LOGS := true
 endif
+
+BOARD_USE_APP_ALARM_ALIGNMENT ?= true
 
 # google apps
 BUILD_WITH_GOOGLE_MARKET := false
@@ -62,26 +62,30 @@ BOOT_SHUTDOWN_ANIMATION_RINGING := false
 BOARD_NFC_SUPPORT := false
 BOARD_HAS_GPS := false
 
-BOARD_GRAVITY_SENSOR_SUPPORT := false
-BOARD_COMPASS_SENSOR_SUPPORT := false
-BOARD_GYROSCOPE_SENSOR_SUPPORT := false
+#for 3G/4G modem dongle support
+BOARD_HAVE_DONGLE := false
+
+
+BOARD_GRAVITY_SENSOR_SUPPORT := true
+BOARD_COMPASS_SENSOR_SUPPORT := true
+BOARD_GYROSCOPE_SENSOR_SUPPORT := true
 BOARD_PROXIMITY_SENSOR_SUPPORT := false
-BOARD_LIGHT_SENSOR_SUPPORT := false
+BOARD_LIGHT_SENSOR_SUPPORT := true
 BOARD_PRESSURE_SENSOR_SUPPORT := false
 BOARD_TEMPERATURE_SENSOR_SUPPORT := false
 BOARD_USB_HOST_SUPPORT := true
-BOARD_LEDS_CONTROL := true
 PRODUCT_HAS_CAMERA := true
 TARGET_ROCKCHIP_PCBATEST := false
 
-PRODUCT_COPY_FILES += \
-   device/rockchip/rk3399/rk3399_64/ddr_config.xml:system/etc/ddr_config.xml \
-   device/rockchip/rk3399/rk3399_64/video_status:system/etc/video_status 
+#for ddr var support
+BOARD_DDR_VAR_ENABLED := true
 
 PRODUCT_COPY_FILES += \
-   device/rockchip/rk3399/Vendor_103c_Product_184f.kl:system/usr/keylayout/Vendor_103c_Product_184f.kl \
-   device/rockchip/rk3399/Vendor_103c_Product_184f.idc:system/usr/idc/Vendor_103c_Product_184f.idc \
-   device/rockchip/rk3399/rk29-keypad.idc:system/usr/idc/rk29-keypad.idc \
+   device/rockchip/rk3399/rk3399_all/ddr_config.xml:system/etc/ddr_config.xml \
+   device/rockchip/rk3399/rk3399_all/video_status:system/etc/video_status 
+
 
 PRODUCT_PACKAGES += \
     SoundRecorder
+
+#PRODUCT_HAVE_OPTEE := true

@@ -1,10 +1,2 @@
-add_lunch_combo rk3399-userdebug
-add_lunch_combo rk3399_32-userdebug
-add_lunch_combo rk3399_box-userdebug
-add_lunch_combo rk3399_box-user
-add_lunch_combo rk3399_64-userdebug
-add_lunch_combo rk3399_64-user
-add_lunch_combo rk3399_mid-userdebug
-add_lunch_combo rk3399_mid-user
-add_lunch_combo rk3399_laptop-userdebug
-add_lunch_combo rk3399_laptop-user
+add_lunch_combo rk3399_all-userdebug
+add_lunch_combo rk3399_all-user
