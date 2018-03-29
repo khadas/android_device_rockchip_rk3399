@@ -82,7 +82,8 @@ BOARD_DDR_VAR_ENABLED := true
 
 PRODUCT_COPY_FILES += \
    device/rockchip/rk3399/rk3399_all/ddr_config.xml:system/etc/ddr_config.xml \
-   device/rockchip/rk3399/rk3399_all/video_status:system/etc/video_status 
+   device/rockchip/rk3399/rk3399_all/video_status:system/etc/video_status \
+   device/rockchip/common/resolution_white.xml:/system/usr/share/resolution_white.xml
 
 
 PRODUCT_PACKAGES += \
