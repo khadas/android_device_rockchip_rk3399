@@ -108,7 +108,7 @@ BUILD_WITH_GOOGLE_FRP := false
 BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 
 # camera enable
-BOARD_CAMERA_SUPPORT := false
+BOARD_CAMERA_SUPPORT := true
 ALLOW_MISSING_DEPENDENCIES=true
 
 #Config omx to support codec type.
