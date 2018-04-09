@@ -30,7 +30,7 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 MIXIN_DEBUG_LOGS := true
 endif
 
-BOARD_USE_APP_ALARM_ALIGNMENT ?= true
+BOARD_USE_APP_ALARM_ALIGNMENT ?= false
 
 # google apps
 BUILD_WITH_GOOGLE_MARKET := false
