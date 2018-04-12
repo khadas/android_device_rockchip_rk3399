@@ -42,6 +42,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dptx.bin:root/lib/firmware/rockchip/dptx.bin
 
+#for audio 3a
+ifeq ($(BOARD_USE_AUDIO_3A),true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/libvoiceprocess.so:system/lib/libvoiceprocess.so \
+    $(LOCAL_PATH)/RK_VoicePara.bin:system/etc/RK_VoicePara.bin
+endif
+
 #debug io bin
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/io:system/xbin/io

@@ -41,6 +41,9 @@ TARGET_BOARD_PLATFORM := rk3399
 TARGET_BOARD_PLATFORM_GPU := mali-t860
 BOARD_USE_DRM := true
 
+# for audio 3A algorithm
+BOARD_USE_AUDIO_3A := false
+
 # RenderScript
 # OVERRIDE_RS_DRIVER := libnvRSDriver.so
 BOARD_OVERRIDE_RS_CPU_VARIANT_32 := cortex-a53
