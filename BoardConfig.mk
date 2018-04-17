@@ -112,7 +112,7 @@ BOARD_CAMERA_SUPPORT := true
 ALLOW_MISSING_DEPENDENCIES=true
 
 #Config omx to support codec type.
-BOARD_SUPPORT_VP9 := false
+BOARD_SUPPORT_VP9 := true
 BOARD_SUPPORT_VP6 := false
 
 #for camera autofocus support
