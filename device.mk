@@ -74,6 +74,11 @@ BOARD_SEPOLICY_DIRS += $(local_path)/sepolicy/debug-logs
 BOARD_SEPOLICY_M4DEFS += module_debug_logs=true
 endif
 
+# normal for single ethernet, multi for two, bridge for lan bridge
+# You can change this value in system
+# It would work after reboot
+ADDITIONAL_DEFAULT_PROPERTIES += persist.net.ethernet.mode=normal
+
 # debug-crashlogd
 ifeq ($(MIXIN_DEBUG_LOGS),true)
 

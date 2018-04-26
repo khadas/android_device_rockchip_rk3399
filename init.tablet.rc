@@ -21,3 +21,11 @@ on boot
     write /dev/cpuset/top-app/cpus 4-5
     write /sys/devices/system/cpu/cpufreq/policy4/interactive/target_loads 65
     ioprio rt 4
+
+service lan_bridge_on /system/bin/sh /system/bin/lan_bridge_on.sh
+	seclabel u:r:lan_bridge_on:s0
+	oneshot
+	disabled
+
+on property:persist.net.ethernet.mode=bridge
+	start lan_bridge_on
