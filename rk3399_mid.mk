@@ -20,7 +20,7 @@ $(call inherit-product, device/rockchip/rk3399/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
 
 PRODUCT_CHARACTERISTICS := tablet
-PRODUCT_SHIPPING_API_LEVEL :=25
+PRODUCT_SHIPPING_API_LEVEL :=26
 
 PRODUCT_NAME := rk3399_mid
 PRODUCT_DEVICE := rk3399_mid
