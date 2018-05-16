@@ -89,5 +89,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
                 ro.factory.tool=0 \
                 ro.kernel.android.checkjni=0 \
                 ro.sf.lcd_density=280 \
-                ro.build.shutdown_timeout=0 \
+                ro.build.shutdown_timeout=6 \
                 persist.enable_task_snapshots=false
