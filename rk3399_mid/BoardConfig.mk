@@ -32,7 +32,7 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a15
 
 TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
-PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3399/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3399/rk3399_mid/overlay
 
 
 # Disable emulator for "make dist" until there is a 64-bit qemu kernel
