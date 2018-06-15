@@ -65,6 +65,10 @@ endif
 PRODUCT_COPY_FILES += \
     device/rockchip/rk3399/public.libraries.txt:vendor/etc/public.libraries.txt
 
+#fireware for dp
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/dptx.bin:root/lib/firmware/rockchip/dptx.bin
+
 #
 #add Rockchip properties here
 #
