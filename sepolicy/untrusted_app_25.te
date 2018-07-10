@@ -1,0 +1,2 @@
+allow untrusted_app_25 hal_neuralnetworks_hwservice:hwservice_manager {find};
+allow untrusted_app_25 hal_neuralnetworks_armnn:binder {call transfer};

@@ -1,0 +1,2 @@
+allow platform_app hal_neuralnetworks_hwservice:hwservice_manager {find};
+allow platform_app hal_neuralnetworks_armnn:binder {call transfer};

@@ -1,0 +1,5 @@
+# default hal
+/vendor/bin/hw/android\.hardware\.neuralnetworks@1\.0-service-armnn   u:object_r:hal_neuralnetworks_armnn_exec:s0
+
+#for androidNN
+/sys/devices/platform/ff690000.efuse/rockchip-efuse0/nvmem u:object_r:sysfs_armnn:s0
