@@ -2,5 +2,3 @@ service neuralnetworks_hal_service_armnn /vendor/bin/hw/android.hardware.neuraln
     class hal
     user system
     group system
-    oneshot
-    seclabel u:r:drmserver:s0
