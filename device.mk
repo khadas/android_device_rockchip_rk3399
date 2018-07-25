@@ -40,6 +40,7 @@ PRODUCT_COPY_FILES += \
     device/rockchip/rk3399/package_performance.xml:$(TARGET_COPY_OUT_OEM)/etc/package_performance.xml \
     device/rockchip/$(TARGET_BOARD_PLATFORM)/media_profiles_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
+ifeq ($(strip $(BOARD_USE_ANDROIDNN)), true)
 # ARMNN
 PRODUCT_COPY_FILES += \
     device/rockchip/rk3399/armnn/android.hardware.neuralnetworks@1.0-service-armnn.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.0-service-armnn.rc \
@@ -48,6 +49,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,device/rockchip/rk3399/armnn/bin,$(TARGET_COPY_OUT_VENDOR)/etc/armnn/bin)
+endif
 
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
