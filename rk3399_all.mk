@@ -89,4 +89,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SoundRecorder
 
+# enable sdcardfs to fix problem which caused by ntfs + fuse
+# and also optimize the filesystem access speed.
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=true
+
 #PRODUCT_HAVE_OPTEE := true
