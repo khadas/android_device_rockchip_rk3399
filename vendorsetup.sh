@@ -17,3 +17,5 @@ add_lunch_combo rk3399-userdebug
 add_lunch_combo rk3399-user
 add_lunch_combo rk3399_mid-userdebug
 add_lunch_combo rk3399_mid-user
+add_lunch_combo rk3399pro-userdebug
+add_lunch_combo rk3399pro-user
