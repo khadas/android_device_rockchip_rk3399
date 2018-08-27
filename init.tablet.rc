@@ -18,7 +18,7 @@ on boot
     write /dev/cpuset/foreground/boost/cpus 4-5
     write /dev/cpuset/background/cpus 0
     write /dev/cpuset/system-background/cpus 0-3
-    write /dev/cpuset/top-app/cpus 4-5
+    write /dev/cpuset/top-app/cpus 0-5
     write /sys/devices/system/cpu/cpufreq/policy4/interactive/target_loads 65
     ioprio rt 4
 
