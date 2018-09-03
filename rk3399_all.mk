@@ -85,6 +85,20 @@ PRODUCT_COPY_FILES += \
    device/rockchip/rk3399/rk3399_all/video_status:system/etc/video_status \
    device/rockchip/common/resolution_white.xml:/system/usr/share/resolution_white.xml
 
+#for rockchip auto test scripts
+PRODUCT_COPY_FILES += \
+   device/rockchip/rk3399/rockchip_test/ddr/memtester_64bit:/system/bin/memtester \
+   device/rockchip/rk3399/rockchip_test/ddr/stressapptest:/system/bin/stressapptest \
+   device/rockchip/rk3399/rockchip_test/ddr/libstlport.so:/system/lib/libstlport.so \
+   device/rockchip/rk3399/rockchip_test/ddr/ddr_test.sh:/system/bin/ddr_test.sh \
+   device/rockchip/rk3399/rockchip_test/ddr/memtester_test.sh:/system/bin/memtester_test.sh \
+   device/rockchip/rk3399/rockchip_test/ddr/stressapptest_test.sh:/system/bin/stressapptest_test.sh \
+   device/rockchip/rk3399/rockchip_test/dvfs/auto_cpu_freq_test.sh:/system/bin/auto_cpu_freq_test.sh \
+   device/rockchip/rk3399/rockchip_test/dvfs/auto_ddr_freq_test.sh:/system/bin/auto_ddr_freq_test.sh \
+   device/rockchip/rk3399/rockchip_test/dvfs/auto_gpu_freq_test.sh:/system/bin/auto_gpu_freq_test.sh \
+   device/rockchip/rk3399/rockchip_test/dvfs/dvfs_test.sh:/system/bin/dvfs_test.sh \
+   device/rockchip/rk3399/rockchip_test/rockchip_test.sh:/system/bin/rockchip_test.sh
+
 
 PRODUCT_PACKAGES += \
     SoundRecorder
