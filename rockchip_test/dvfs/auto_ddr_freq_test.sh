@@ -14,7 +14,7 @@ governor_ddr=`cat /sys/class/devfreq/dmc/governor`
 
 echo "*********scaling governor of ddr: $governor_ddr!"
 
-freq_list_gpu=`cat /sys/class/devfreq/dmc/available_frequencies`
+freq_list_ddr=`cat /sys/class/devfreq/dmc/available_frequencies`
 
 echo "freq_list_ddr: $freq_list_ddr"
 
