@@ -18,6 +18,8 @@
 -include vendor/rockchip/rk3399/BoardConfigVendor.mk
 -include device/rockchip/common/BoardConfig.mk
 
+TARGET_BASE_PARAMETER_IMAGE := device/rockchip/common/baseparameter/baseparameter_fb720.img
+
 TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
 
 TARGET_ARCH := arm64
