@@ -124,3 +124,45 @@ PRODUCT_PROPERTY_OVERRIDES += \
     sys.hwc.device.extend=DP
 
 #PRODUCT_HAVE_OPTEE := true
+
+# multi-screen splicing
+BOARD_MULTISCREEN_SPLICING := false
+BOARD_MULTISCREEN_SPLICING_MODE := 0
+BOARD_MULTISCREEN_SPLICING_SCREENSIZE := 2
+
+# config file for multi-screen splicing
+ifeq ($(strip $(BOARD_MULTISCREEN_SPLICING)),true)
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.sys.dualModeEnable=1 \
+   sys.hwc.compose_policy=0 \
+   sys.gralloc.disable_afbc=1
+ifeq ($(BOARD_MULTISCREEN_SPLICING_MODE),1)
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.sys.dualModeTB=1
+ifeq ($(BOARD_MULTISCREEN_SPLICING_SCREENSIZE),2)
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.sys.framebuffer.main=1080x3840@60 \
+   persist.sys.framebuffer.aux=1080x3840@60 \
+   persist.sys.dualModeRatio=2
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.sys.framebuffer.main=1080x5760@60 \
+   persist.sys.framebuffer.aux=1080x5760@60 \
+   persist.sys.dualModeRatio=3
+endif
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.sys.dualModeTB=0
+ifeq ($(BOARD_MULTISCREEN_SPLICING_SCREENSIZE),2)
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.sys.framebuffer.main=3840x1080@60 \
+   persist.sys.framebuffer.aux=3840x1080@60 \
+   persist.sys.dualModeRatio=2
+else
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.sys.framebuffer.main=5760x1080@60 \
+   persist.sys.framebuffer.aux=5760x1080@60 \
+   persist.sys.dualModeRatio=3
+endif
+endif
+endif
