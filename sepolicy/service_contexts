@@ -1,0 +1,4 @@
+# example: FOTA service.
+#fo_sl_enhance                  u:object_r:fo_sl_enhance_service:s0
+
+drm_device_management           u:object_r:drm_device_management_service:s0
