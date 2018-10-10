@@ -128,7 +128,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # multi-screen splicing
 BOARD_MULTISCREEN_SPLICING := false
 BOARD_MULTISCREEN_SPLICING_MODE := 0
-BOARD_MULTISCREEN_SPLICING_SCREENSIZE := 2
+#three 1080p screen splicing(1:1:1)
+PRODUCT_PROPERTY_OVERRIDES += \
+   persist.sys.framebuffer.main=5760x1080@60 \
+   persist.sys.framebuffer.aux=5760x1080@60 \
+   persist.sys.dualModeRatioPri=2 \
+   persist.sys.dualModeRatioAux=1
 
 # config file for multi-screen splicing
 ifeq ($(strip $(BOARD_MULTISCREEN_SPLICING)),true)
@@ -139,30 +144,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 ifeq ($(BOARD_MULTISCREEN_SPLICING_MODE),1)
 PRODUCT_PROPERTY_OVERRIDES += \
    persist.sys.dualModeTB=1
-ifeq ($(BOARD_MULTISCREEN_SPLICING_SCREENSIZE),2)
-PRODUCT_PROPERTY_OVERRIDES += \
-   persist.sys.framebuffer.main=1080x3840@60 \
-   persist.sys.framebuffer.aux=1080x3840@60 \
-   persist.sys.dualModeRatio=2
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-   persist.sys.framebuffer.main=1080x5760@60 \
-   persist.sys.framebuffer.aux=1080x5760@60 \
-   persist.sys.dualModeRatio=3
-endif
 else
 PRODUCT_PROPERTY_OVERRIDES += \
    persist.sys.dualModeTB=0
-ifeq ($(BOARD_MULTISCREEN_SPLICING_SCREENSIZE),2)
-PRODUCT_PROPERTY_OVERRIDES += \
-   persist.sys.framebuffer.main=3840x1080@60 \
-   persist.sys.framebuffer.aux=3840x1080@60 \
-   persist.sys.dualModeRatio=2
-else
-PRODUCT_PROPERTY_OVERRIDES += \
-   persist.sys.framebuffer.main=5760x1080@60 \
-   persist.sys.framebuffer.aux=5760x1080@60 \
-   persist.sys.dualModeRatio=3
-endif
 endif
 endif
