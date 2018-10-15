@@ -1,5 +1,4 @@
-#
-# Copyright 2014 The Android Open-Source Project
+## Copyright 2014 The Android Open-Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -34,8 +33,8 @@ ifeq ($(HOST_OS),linux)
 endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.rk3399.rc:root/init.rk3399.rc \
-    $(LOCAL_PATH)/init.rk30board.usb.rc:root/init.rk30board.usb.rc \
+    $(LOCAL_PATH)/init.rk3399.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rk3399.rc \
+    $(LOCAL_PATH)/init.rk30board.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rk30board.usb.rc \
     $(LOCAL_PATH)/wake_lock_filter.xml:system/etc/wake_lock_filter.xml \
     device/rockchip/rk3399/package_performance.xml:$(TARGET_COPY_OUT_OEM)/etc/package_performance.xml \
     device/rockchip/$(TARGET_BOARD_PLATFORM)/media_profiles_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
@@ -65,7 +64,7 @@ ifeq ($(strip $(PRODUCT_HAVE_OPTEE)),true)
 #rkss
 PRODUCT_PROPERTY_OVERRIDES += ro.tee.storage=rkss
 PRODUCT_COPY_FILES += \
-       device/rockchip/common/init.optee_verify.rc:root/init.optee.rc
+       device/rockchip/common/init.optee_verify.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.optee.rc
 endif
 
 PRODUCT_COPY_FILES += \
@@ -93,7 +92,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
                 ro.rk.def_brightness=200 \
                 ro.rk.homepage_base=http://www.google.com/webhp?client={CID}&amp;source=android-home \
                 ro.rk.install_non_market_apps=false \
-                sys.hwc.compose_policy=6 \
+                vendor.hwc.compose_policy=6 \
                 sys.wallpaper.rgb565=0 \
                 sf.power.control=2073600 \
                 sys.rkadb.root=0 \
