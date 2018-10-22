@@ -1,8 +1,8 @@
 #!/bin/sh
 ### file: rockchip_test.sh
-### author: yhx@rock-chips.com
-### function: ddr cpu gpio audio usb player ehernet sdio/pcie(wifi) 
-### date: 20180327
+### author: zwp@rock-chips.com
+### function: ddr cpu memory_monitor 
+### date: 20180922
 
 moudle_env()
 {
@@ -24,6 +24,7 @@ module_choice()
     echo "*****************************************************"
     echo "ddr test :            1 (memtester & stressapptest)"
     echo "dvfs_test:        2 (dvfs stresstest, including cpu/gpu/ddr)"
+    echo "memory_monitor:        3 (tools used to detect memory leak)"
     echo "*****************************************************"
 
     echo  "please input your test moudle: "
@@ -40,6 +41,11 @@ dvfs_test()
     sh /system/bin/dvfs_test.sh
 }
 
+memory_monitor()
+{
+    sh /system/bin/memory_monitor.sh
+}
+
 module_test()
 {
     case ${MODULE_CHOICE} in
@@ -48,6 +54,9 @@ module_test()
             ;;
         2)
             dvfs_test
+            ;;
+        3)
+            memory_monitor
             ;;
     esac
 }

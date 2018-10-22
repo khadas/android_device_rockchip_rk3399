@@ -103,6 +103,7 @@ PRODUCT_COPY_FILES += \
    device/rockchip/rk3399/rockchip_test/dvfs/auto_ddr_freq_test.sh:/system/bin/auto_ddr_freq_test.sh \
    device/rockchip/rk3399/rockchip_test/dvfs/auto_gpu_freq_test.sh:/system/bin/auto_gpu_freq_test.sh \
    device/rockchip/rk3399/rockchip_test/dvfs/dvfs_test.sh:/system/bin/dvfs_test.sh \
+   device/rockchip/rk3399/rockchip_test/memory_monitor/memory_monitor.sh:/system/bin/memory_monitor.sh \
    device/rockchip/rk3399/rockchip_test/rockchip_test.sh:/system/bin/rockchip_test.sh
 
 
