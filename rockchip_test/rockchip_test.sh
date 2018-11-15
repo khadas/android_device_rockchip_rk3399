@@ -34,12 +34,12 @@ module_choice()
 
 ddr_test()
 {
-    sh /system/bin/ddr_test.sh &
+    sh /system/bin/ddr_test.sh
 }
 
 dvfs_test()
 {
-    sh /system/bin/dvfs_test.sh &
+    sh /system/bin/dvfs_test.sh
 }
 
 memory_monitor()
