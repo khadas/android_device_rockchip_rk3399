@@ -122,6 +122,7 @@ BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 
 # camera enable
 BOARD_CAMERA_SUPPORT := true
+BOARD_CAMERA_SUPPORT_EXT := true
 ALLOW_MISSING_DEPENDENCIES=true
 
 #Config omx to support codec type.
