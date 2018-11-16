@@ -18,7 +18,9 @@ $(call inherit-product, $(LOCAL_PATH)/rk3399.mk)
 
 PRODUCT_NAME := rk3399_all
 PRODUCT_DEVICE := rk3399_all
-PRODUCT_MODEL := rk3399-all
+PRODUCT_MODEL := Edge
+PRODUCT_BRAND := Khadas
+PRODUCT_MANUFACTURER := Khadas
 
 PRODUCT_AAPT_CONFIG := normal large mdpi tvdpi hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
