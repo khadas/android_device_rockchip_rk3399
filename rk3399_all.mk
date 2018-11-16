@@ -57,6 +57,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp,adb
 endif
 
+BUILD_NUMBER := $(shell $(DATE) +%Y%m%d)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.display.id=Edge_Nougat_$(BUILD_NUMBER)
+
 BOOT_SHUTDOWN_ANIMATION_RINGING := false
 
 BOARD_NFC_SUPPORT := false
