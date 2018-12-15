@@ -21,3 +21,7 @@ PRODUCT_RUNTIMES := runtime_libart_default
 $(call inherit-product, device/rockchip/rk3399/device.mk)
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+ifeq ($(BUILD_WITH_GAPPS_CONFIG),true)
+$(call inherit-product, vendor/rockchip/google/gapps.mk)
+endif

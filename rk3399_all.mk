@@ -109,6 +109,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     SoundRecorder
 
+#Gapps Build Config
+BUILD_WITH_GAPPS_CONFIG :=false
+
 # enable sdcardfs to fix problem which caused by ntfs + fuse
 # and also optimize the filesystem access speed.
 PRODUCT_PROPERTY_OVERRIDES += \
