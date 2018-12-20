@@ -117,4 +117,8 @@ BUILD_WITH_GAPPS_CONFIG :=false
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sys.sdcardfs=true
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.hwc.device.primary=HDMI-A \
+    sys.hwc.device.extend=DP
+
 #PRODUCT_HAVE_OPTEE := true
