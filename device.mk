@@ -56,7 +56,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml
 
 PRODUCT_PACKAGES += \
-    librkisp_ae \
+    librkisp_aec \
     librkisp_awb \
     librkisp_af
 endif
