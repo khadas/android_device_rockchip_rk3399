@@ -25,3 +25,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 ifeq ($(BUILD_WITH_GAPPS_CONFIG),true)
 $(call inherit-product-if-exists, vendor/rockchip/google/gapps.mk)
 endif
+ifeq ($(BUILD_WITH_ROOT_CONFIG),true)
+$(call inherit-product-if-exists, vendor/rockchip/root/root.mk)
+endif

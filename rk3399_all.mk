@@ -111,6 +111,8 @@ PRODUCT_PACKAGES += \
 
 #Gapps Build Config
 BUILD_WITH_GAPPS_CONFIG :=false
+#Root Build Config
+BUILD_WITH_ROOT_CONFIG :=false
 
 # enable sdcardfs to fix problem which caused by ntfs + fuse
 # and also optimize the filesystem access speed.
