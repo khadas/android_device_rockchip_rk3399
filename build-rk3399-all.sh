@@ -84,12 +84,6 @@ fi
 
 lunch rk3399_all-userdebug
 
-# build wifi driver ko
-if [ -f "device/rockchip/common/build_wifi_ko.sh" ]; then
-    echo "start build wifi driver ko"
-    source device/rockchip/common/build_wifi_ko.sh
-fi
-
 # build android
 echo "start build android"
 make installclean
