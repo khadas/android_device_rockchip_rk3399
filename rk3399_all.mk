@@ -139,6 +139,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
    persist.sys.dualModeRatioAux=1
 endif
 
+PRODUCT_PROPERTY_OVERRIDES += \
+   service.adb.tcp.port=5555
+
 # config file for multi-screen splicing
 ifeq ($(strip $(BOARD_MULTISCREEN_SPLICING)),true)
 PRODUCT_PROPERTY_OVERRIDES += \
