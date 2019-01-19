@@ -142,6 +142,13 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
    service.adb.tcp.port=5555
 
+#i2c tools
+PRODUCT_PACKAGES += \
+   i2cget \
+   i2cset \
+   i2cdump \
+   i2cdetect
+
 # config file for multi-screen splicing
 ifeq ($(strip $(BOARD_MULTISCREEN_SPLICING)),true)
 PRODUCT_PROPERTY_OVERRIDES += \
