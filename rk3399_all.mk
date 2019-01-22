@@ -25,7 +25,7 @@ PRODUCT_MANUFACTURER := Khadas
 PRODUCT_AAPT_CONFIG := normal large mdpi tvdpi hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
-PRODUCT_SYSTEM_VERITY := true
+PRODUCT_SYSTEM_VERITY := false
 
 # debug-logs
 ifneq ($(TARGET_BUILD_VARIANT),user)
