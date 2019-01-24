@@ -114,7 +114,14 @@ PRODUCT_PACKAGES += \
 #Gapps Build Config
 BUILD_WITH_GAPPS_CONFIG :=false
 #Root Build Config
-BUILD_WITH_ROOT_CONFIG :=false
+BUILD_WITH_ROOT_CONFIG :=true
+#Root menu on Settings
+BUILD_WITH_ROOT_MENU := true
+
+ifeq ($(strip $(BUILD_WITH_ROOT_MENU)), true)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root.menu=true
+endif
 
 # enable sdcardfs to fix problem which caused by ntfs + fuse
 # and also optimize the filesystem access speed.
