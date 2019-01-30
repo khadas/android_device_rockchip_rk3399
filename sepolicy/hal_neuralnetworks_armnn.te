@@ -18,7 +18,6 @@ allow hal_neuralnetworks_armnn property_socket:sock_file write;
 allow hal_neuralnetworks_armnn gpu_device:chr_file { read write };
 allow hal_neuralnetworks_armnn init:unix_stream_socket connectto;
 allow hal_neuralnetworks_armnn gpu_device:chr_file open;
-allow hal_neuralnetworks_armnn system_prop:property_service set;
 allow hal_neuralnetworks_armnn gpu_device:chr_file getattr;
 allow hal_neuralnetworks_armnn gpu_device:chr_file ioctl;
 allow hal_neuralnetworks_armnn sysfs_armnn:file { read open getattr};
