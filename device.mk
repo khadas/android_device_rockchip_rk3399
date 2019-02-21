@@ -182,6 +182,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-threads=2 \
     dalvik.vm.image-dex2oat-threads=2
 
+ifeq ($(BUILD_WITH_CLOUDPHONE_CONFIG),true)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.has.atxagent=true
+endif
+
 # setup dalvik vm configs.
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 

@@ -28,3 +28,6 @@ endif
 ifeq ($(BUILD_WITH_ROOT_CONFIG),true)
 $(call inherit-product-if-exists, vendor/rockchip/root/root.mk)
 endif
+ifeq ($(BUILD_WITH_CLOUDPHONE_CONFIG),true)
+$(call inherit-product-if-exists, vendor/rockchip/cloudphone/cloudphone.mk)
+endif

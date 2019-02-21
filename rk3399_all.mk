@@ -117,6 +117,8 @@ BUILD_WITH_GAPPS_CONFIG :=false
 BUILD_WITH_ROOT_CONFIG :=true
 #Root menu on Settings
 BUILD_WITH_ROOT_MENU := true
+#CloudPhone Build Config
+BUILD_WITH_CLOUDPHONE_CONFIG :=false
 
 ifeq ($(strip $(BUILD_WITH_ROOT_MENU)), true)
 PRODUCT_PROPERTY_OVERRIDES += \
