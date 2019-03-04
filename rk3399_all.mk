@@ -158,6 +158,10 @@ PRODUCT_PACKAGES += \
    i2cdump \
    i2cdetect
 
+#Factory test
+PRODUCT_PACKAGES += \
+   FactoryTest
+
 # config file for multi-screen splicing
 ifeq ($(strip $(BOARD_MULTISCREEN_SPLICING)),true)
 PRODUCT_PROPERTY_OVERRIDES += \
