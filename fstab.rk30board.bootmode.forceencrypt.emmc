@@ -17,9 +17,6 @@
 # sdcard
 /devices/platform/fe320000.dwmmc/mmc_host*                auto  auto    defaults        voldmanaged=sdcard1:auto,encryptable=userdata
 
-# for usb2.0
-/devices/platform/*.usb*            auto vfat defaults      voldmanaged=usb:auto
-# for usb3.0
-/devices/platform/usb@*/*.dwc3*     auto vfat defaults      voldmanaged=usb:auto
+/devices/platform/*usb*   auto vfat defaults      voldmanaged=usb:auto
 
 /dev/block/zram0                                none                swap      defaults                                              zramsize=533413200

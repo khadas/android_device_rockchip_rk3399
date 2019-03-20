@@ -13,11 +13,6 @@
 
 /devices/ff0c0000.rksdmmc/mmc_host/mmc*          auto       auto       defaults        voldmanaged=sdcard1:auto,encryptable=userdata
 
-# non box product,configuration to the first item, will filter out left
-#58,54 support high speed & full speed;50 only support high speed, 5c only support full speed and must link hsic hub
-/devices/ff580000.usb*     auto vfat defaults      voldmanaged=usb:auto
-/devices/ff500000.usb*     auto vfat defaults      voldmanaged=usb:auto
-/devices/ff540000.usb*     auto vfat defaults      voldmanaged=usb:auto
-/devices/ff5c0000.usb*     auto vfat defaults      voldmanaged=usb:auto
+/devices/platform/*usb*   auto vfat defaults      voldmanaged=usb:auto
 
 /dev/block/zram0                                none                swap      defaults                                              zramsize=533413200
