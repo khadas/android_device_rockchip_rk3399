@@ -131,3 +131,7 @@ endif
 ifeq ($(strip $(BOARD_SHOW_HDMI_SETTING)), true)
 DEVICE_MANIFEST_FILE := device/rockchip/$(TARGET_BOARD_PLATFORM)/manifest_hdmi.xml
 endif
+ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
+TARGET_RECOVERY_FSTAB := device/rockchip/rk3399/fstab.rk30board_AB
+DEVICE_MANIFEST_FILE := device/rockchip/$(TARGET_BOARD_PLATFORM)/manifest_ab.xml
+endif
