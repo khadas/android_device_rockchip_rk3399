@@ -125,3 +125,8 @@ BOARD_USE_ANDROIDNN := false
 ifeq ($(strip $(BOARD_USE_ANDROIDNN)), true)
 DEVICE_MANIFEST_FILE := device/rockchip/$(TARGET_BOARD_PLATFORM)/manifest.xml
 endif
+
+ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
+TARGET_RECOVERY_FSTAB := device/rockchip/rk3399/fstab.rk30board_AB
+DEVICE_MANIFEST_FILE := device/rockchip/$(TARGET_BOARD_PLATFORM)/manifest_ab.xml
+endif
