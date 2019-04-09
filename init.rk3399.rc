@@ -16,6 +16,9 @@ on init
     chown root system /sys/class/devfreq/ff9a0000.gpu/max_freq
     chmod 0664 /sys/class/devfreq/ff9a0000.gpu/max_freq
 
+    chown root system /dev/cec0
+    chmod 0664 /dev/cec0
+    
 on boot
 # baseparameter
     chown system system /dev/block/platform/fe330000.sdhci/by-name/baseparameter
