@@ -43,8 +43,8 @@ PRODUCT_COPY_FILES += \
 ifeq ($(strip $(BOARD_USE_ANDROIDNN)), true)
 # ARMNN
 PRODUCT_COPY_FILES += \
-    device/rockchip/rk3399/armnn/android.hardware.neuralnetworks@1.0-service-armnn.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.0-service-armnn.rc \
-    device/rockchip/rk3399/armnn/android.hardware.neuralnetworks@1.0-service-armnn:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.0-service-armnn \
+    device/rockchip/rk3399/armnn/android.hardware.neuralnetworks@1.1-service-armnn.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.neuralnetworks@1.1-service-armnn.rc \
+    device/rockchip/rk3399/armnn/android.hardware.neuralnetworks@1.1-service-armnn:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.neuralnetworks@1.1-service-armnn \
     device/rockchip/rk3399/armnn/tuned_data:$(TARGET_COPY_OUT_VENDOR)/etc/armnn/tuned_data
 
 PRODUCT_COPY_FILES += \
