@@ -67,9 +67,10 @@ export CLASSPATH=.:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
 # source environment and chose target product
 DEVICE=`get_build_var TARGET_PRODUCT`
 BUILD_VARIANT=`get_build_var TARGET_BUILD_VARIANT`
-UBOOT_DEFCONFIG=rk3399
-KERNEL_DEFCONFIG=rockchip_defconfig
-KERNEL_DTS=rk3399-sapphire-excavator-edp-avb
+UBOOT_DEFCONFIG=kedge
+KERNEL_DEFCONFIG=kedge_defconfig
+KERNEL_DTS=rk3399-khadas-edge-android
+#KERNEL_DTS=rk3399-khadas-edge-mipi-android
 PACK_TOOL_DIR=RKTools/linux/Linux_Pack_Firmware
 IMAGE_PATH=rockdev/Image-$TARGET_PRODUCT
 export PROJECT_TOP=`gettop`

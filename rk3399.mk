@@ -23,11 +23,14 @@ PRODUCT_CHARACTERISTICS := tablet
 
 PRODUCT_NAME := rk3399
 PRODUCT_DEVICE := rk3399
-PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := rk3399
-PRODUCT_MANUFACTURER := rockchip
+PRODUCT_BRAND := Khadas
+PRODUCT_MODEL := Edge
+PRODUCT_MANUFACTURER := Khadas
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+BUILD_NUMBER := $(shell $(DATE) +%Y%m%d)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.display.id=Edge_Pie_$(BUILD_NUMBER)
 PRODUCT_PACKAGES += \
     SoundRecorder
 
@@ -39,4 +42,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.ota.host = www.rockchip.com:2300 \
     ro.sf.lcd_density=280
 
+PRODUCT_PROPERTY_OVERRIDES += \
+   service.adb.tcp.port=5555
+   
+#Factory test
+PRODUCT_PACKAGES += \
+   FactoryTest
+   
 #PRODUCT_HAVE_OPTEE := true
