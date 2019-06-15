@@ -34,6 +34,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     SoundRecorder
 
+#Root Build Config
+BUILD_WITH_ROOT_CONFIG :=true
+#Root menu on Settings
+BUILD_WITH_ROOT_MENU := true
+ifeq ($(strip $(BUILD_WITH_ROOT_MENU)), true)
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.root.menu=true
+endif
 # Get the long list of APNs
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/spn-conf.xml
