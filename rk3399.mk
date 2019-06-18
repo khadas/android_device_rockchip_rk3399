@@ -33,7 +33,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.display.id=Edge_Pie_$(BUILD_NUMBER)
 PRODUCT_PACKAGES += \
     SoundRecorder
-
+	
+#Gapps Build Config
+BUILD_WITH_GAPPS_CONFIG :=false
 #Root Build Config
 BUILD_WITH_ROOT_CONFIG :=true
 #Root menu on Settings
@@ -42,6 +44,12 @@ ifeq ($(strip $(BUILD_WITH_ROOT_MENU)), true)
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root.menu=true
 endif
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.hwc.device.primary=HDMI-A \
+    sys.hwc.device.extend=DP
+	#sys.hwc.device.extend=DSI
+	
 # Get the long list of APNs
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/spn-conf.xml
