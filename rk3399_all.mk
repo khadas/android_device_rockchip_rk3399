@@ -18,7 +18,7 @@ $(call inherit-product, $(LOCAL_PATH)/rk3399.mk)
 
 PRODUCT_NAME := rk3399_all
 PRODUCT_DEVICE := rk3399_all
-PRODUCT_MODEL := Edge
+PRODUCT_MODEL := rk3399
 PRODUCT_BRAND := Khadas
 PRODUCT_MANUFACTURER := Khadas
 
