@@ -46,9 +46,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    sys.hwc.device.primary=HDMI-A \
-    sys.hwc.device.extend=DP
-	#sys.hwc.device.extend=DSI
+	persist.hdmi.ui.state=2 \
+    vendor.hwc.device.primary=HDMI-A \
+    vendor.hwc.device.extend=DP
+	#vendor.hwc.device.extend=DSI
 	
 # Get the long list of APNs
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
