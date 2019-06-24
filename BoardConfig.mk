@@ -53,9 +53,7 @@ TARGET_USES_64_BIT_BCMDHD := true
 TARGET_USES_64_BIT_BINDER := true
 # BOARD_USE_AFBC_LAYER := true
 BOARD_SHOW_HDMI_SETTING := true
-ifeq ($(strip $(BOARD_SHOW_HDMI_SETTING)), true)
-DEVICE_MANIFEST_FILE := device/rockchip/$(TARGET_BOARD_PLATFORM)/manifest_hdmi.xml
-endif
+
 # HACK: Build apps as 64b for volantis_64_only
 ifneq (,$(filter ro.zygote=zygote64, $(PRODUCT_DEFAULT_PROPERTY_OVERRIDES)))
 TARGET_PREFER_32_BIT_APPS :=
@@ -127,4 +125,9 @@ CAMERA_SUPPORT_AUTOFOCUS=true
 BOARD_USE_ANDROIDNN := false
 ifeq ($(strip $(BOARD_USE_ANDROIDNN)), true)
 DEVICE_MANIFEST_FILE := device/rockchip/$(TARGET_BOARD_PLATFORM)/manifest.xml
+endif
+
+# ANDROID HDMI
+ifeq ($(strip $(BOARD_SHOW_HDMI_SETTING)), true)
+DEVICE_MANIFEST_FILE := device/rockchip/$(TARGET_BOARD_PLATFORM)/manifest_hdmi.xml
 endif
