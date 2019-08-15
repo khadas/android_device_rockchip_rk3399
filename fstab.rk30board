@@ -10,6 +10,7 @@
 /dev/block/by-name/misc         /misc               emmc      defaults     defaults
 
 /devices/platform/*usb*   auto vfat defaults      voldmanaged=usb:auto
+/devices/*pcie/pci*/nvme*  auto          auto       defaults     voldmanaged=pcie:auto
 
 /dev/block/zram0                                none                swap      defaults                                              zramsize=50%
 # For sdmmc
