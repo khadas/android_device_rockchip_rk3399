@@ -47,7 +47,7 @@ endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.hdmi.ui.state=2 \
-	persist.sys.rotation.einit=1 \
+	persist.sys.rotation.einit=3 \
     vendor.hwc.device.primary=HDMI-A,DP\
 	vendor.hwc.device.extend=DSI
 	
