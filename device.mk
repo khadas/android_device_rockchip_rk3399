@@ -20,9 +20,13 @@ PRODUCT_PACKAGES += \
 
 #$_rbox_$_modify_$_zhengyang: add displayd
 PRODUCT_PACKAGES += \
+    fio \
     displayd \
     libion
 
+PRODUCT_PACKAGES += \
+    fio 
+    
 PRODUCT_PACKAGES += \
     dhcptool \
     rild \
