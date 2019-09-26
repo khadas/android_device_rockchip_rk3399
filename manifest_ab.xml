@@ -36,15 +36,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.configstore</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISurfaceFlingerConfigs</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
         <version>3.0</version>
@@ -198,7 +189,6 @@
         <interface>
             <name>ICameraProvider</name>
             <instance>legacy/0</instance>
-            <instance>external/0</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -211,12 +201,12 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.neuralnetworks</name>
+        <name>android.hardware.memtrack</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>IDevice</name>
-            <instance>armnn</instance>
+            <name>IMemtrack</name>
+            <instance>default</instance>
         </interface>
     </hal>
 

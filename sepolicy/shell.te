@@ -1,1 +1,0 @@
-allow shell hal_neuralnetworks_armnn_exec:file getattr;

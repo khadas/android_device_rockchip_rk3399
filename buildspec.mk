@@ -29,9 +29,6 @@ TARGET_BOARD_PLATFORM_GPU ?= mali-t860
 ifndef TARGET_PRODUCT
 TARGET_PRODUCT:=rk3399
 endif
-ifndef TARGET_DEVICE
-TARGET_DEVICE:=rk3399
-endif
 
 # Choose a variant to build.  If you don't pick one, the default is eng.
 # User is what we ship.  Userdebug is that, with a few flags turned on

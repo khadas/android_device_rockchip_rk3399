@@ -16,7 +16,8 @@
 
 # Use the non-open-source parts, if they're present
 -include vendor/rockchip/rk3399/BoardConfigVendor.mk
--include device/rockchip/common/BoardConfig.mk
+
+CURRENT_SDK_VERSION := RK3399_ANDROID10.0_MID_V1.0
 
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -32,7 +33,11 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a15
 
 TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
-PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3399/overlay
+BOARD_PREBUILT_DTBIMAGE_DIR := kernel/arch/arm64/boot/dts/rockchip
+ODUCT_KERNEL_DTS ?= rk3399-evb-ind-lpddr4-android.dts
+PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig
+
+SF_PRIMARY_DISPLAY_ORIENTATION := 0
 
 BOARD_AVB_ENABLE := false
 

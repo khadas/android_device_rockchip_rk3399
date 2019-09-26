@@ -1,8 +1,8 @@
-<manifest version="1.0" type="device" target-level="3">
+<manifest version="1.0" type="device" target-level="4">
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
-        <version>4.0</version>
+        <version>5.0</version>
         <interface>
             <name>IDevicesFactory</name>
             <instance>default</instance>
@@ -11,7 +11,7 @@
     <hal format="hidl">
         <name>android.hardware.audio.effect</name>
         <transport>hwbinder</transport>
-        <version>4.0</version>
+        <version>5.0</version>
         <interface>
             <name>IEffectsFactory</name>
             <instance>default</instance>
@@ -27,12 +27,12 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.configstore</name>
+        <name>android.hardware.camera.provider</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
+        <version>2.4</version>
         <interface>
-            <name>ISurfaceFlingerConfigs</name>
-            <instance>default</instance>
+            <name>ICameraProvider</name>
+            <instance>legacy/0</instance>
         </interface>
     </hal>
     <hal format="hidl">
@@ -62,15 +62,6 @@
         <fqname>@1.1::IDrmFactory/widevine</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.cas</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMediaCasService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.graphics.allocator</name>
         <transport>hwbinder</transport>
         <version>2.0</version>
@@ -82,7 +73,7 @@
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32+64">passthrough</transport>
-        <version>2.0</version>
+        <version>2.1</version>
         <interface>
             <name>IMapper</name>
             <instance>default</instance>
@@ -183,16 +174,6 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.camera.provider</name>
-        <transport>hwbinder</transport>
-        <version>2.4</version>
-        <interface>
-            <name>ICameraProvider</name>
-            <instance>legacy/0</instance>
-            <instance>external/0</instance>
-        </interface>
-    </hal>
-    <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -202,12 +183,12 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>android.hardware.neuralnetworks</name>
+        <name>android.hardware.memtrack</name>
         <transport>hwbinder</transport>
-        <version>1.1</version>
+        <version>1.0</version>
         <interface>
-            <name>IDevice</name>
-            <instance>armnn</instance>
+            <name>IMemtrack</name>
+            <instance>default</instance>
         </interface>
     </hal>
 
