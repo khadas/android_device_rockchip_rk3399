@@ -34,7 +34,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a15
 
 TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
 BOARD_PREBUILT_DTBIMAGE_DIR := kernel/arch/arm64/boot/dts/rockchip
-ODUCT_KERNEL_DTS ?= rk3399-evb-ind-lpddr4-android.dts
+PRODUCT_KERNEL_DTS ?= rk3399-evb-ind-lpddr4-android.dts
 PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig
 
 SF_PRIMARY_DISPLAY_ORIENTATION := 0
