@@ -75,7 +75,9 @@ BOARD_USES_GENERIC_INVENSENSE := false
 
 # GPU MaliT860 support opengl aep
 BOARD_OPENGL_AEP := true
-
+ifneq ($(filter %atv, $(TARGET_PRODUCT)), )
+TARGET_BOARD_PLATFORM_PRODUCT ?= atv
+else
 ifneq ($(filter %box, $(TARGET_PRODUCT)), )
 TARGET_BOARD_PLATFORM_PRODUCT ?= box
 else
@@ -83,6 +85,7 @@ else
    TARGET_BOARD_PLATFORM_PRODUCT ?= vr
 else
 TARGET_BOARD_PLATFORM_PRODUCT ?= tablet
+endif
 endif
 endif
 

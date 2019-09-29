@@ -18,6 +18,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/rk3399.mk \
     $(LOCAL_DIR)/rk3399_mid.mk \
     $(LOCAL_DIR)/rk3399pro.mk  \
+    $(LOCAL_DIR)/rk3399_atv/rk3399_atv.mk \
     $(LOCAL_DIR)/rk3399_mid_qt/rk3399_mid_qt.mk \
     $(LOCAL_DIR)/rk3399pro_qt.mk
 
@@ -26,6 +27,8 @@ COMMON_LUNCH_CHOICES := \
 	rk3399_mid-user \
 	rk3399_mid_qt-userdebug \
         rk3399_mid_qt-user \
+        rk3399_atv-userdebug \
+        rk3399_atv-user \
 	rk3399pro-userdebug \
         rk3399pro-user \
 	rk3399pro_qt-userdebug \
