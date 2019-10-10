@@ -6,5 +6,5 @@ BUILD_WITH_GOOGLE_GMS_EXPRESS := false
 CAMERA_SUPPORT_AUTOFOCUS:= false
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
-TARGET_RECOVERY_FSTAB := device/rockchip/rk3399/rk3399_mid/fstab.rk30board_AB
+TARGET_RECOVERY_FSTAB := device/rockchip/rk3399/rk3399_Android10/fstab.rk30board_AB
 endif

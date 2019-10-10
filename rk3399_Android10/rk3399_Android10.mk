@@ -13,17 +13,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-include device/rockchip/rk3399/rk3399_mid/BoardConfig.mk
+
+# First lunching is Q, api_level is 29
+PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_FSTAB_TEMPLATE := $(LOCAL_PATH)/fstab.in
+PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
+PRODUCT_BOOT_DEVICE := fe330000.sdhci
+include device/rockchip/common/build/rockchip/DynamicPartitions.mk
+include device/rockchip/common/BoardConfig.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+include device/rockchip/rk3399/rk3399_Android10/BoardConfig.mk
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/rockchip/rk3399/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
 
 PRODUCT_CHARACTERISTICS := tablet
 
-PRODUCT_NAME := rk3399_mid
-PRODUCT_DEVICE := rk3399_mid
+PRODUCT_NAME := rk3399_Android10
+PRODUCT_DEVICE := rk3399_Android10
 PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := rk3399-mid
+PRODUCT_MODEL := rk3399-Android10
 PRODUCT_MANUFACTURER := rockchip
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
