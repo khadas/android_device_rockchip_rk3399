@@ -5,6 +5,8 @@ on property:sys.boot_completed=1
     chmod 0664 /sys/class/devfreq/ff9a0000.gpu/min_freq
     chown root system /sys/class/devfreq/ff9a0000.gpu/max_freq
     chmod 0664 /sys/class/devfreq/ff9a0000.gpu/max_freq
+    chown root system /sys/class/devfreq/dmc/governor
+    chmod 0664 /sys/class/devfreq/dmc/governor
 
 on early-boot
     # Update dm-verity state and set partition.*.verified properties
