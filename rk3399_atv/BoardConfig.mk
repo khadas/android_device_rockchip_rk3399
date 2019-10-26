@@ -21,7 +21,7 @@ PRODUCT_KERNEL_CONFIG := rockchip_defconfig
 
 BUILD_WITH_GO_OPT := false
 # Google TV Service and frp overlay
-BUILD_WITH_GTVS := true
+PRODUCT_USE_PREBUILT_GTVS := yes
 BUILD_WITH_GOOGLE_FRP := true
 BOARD_SENSOR_MPU_PAD := false
 BUILD_WITH_GOOGLE_GMS_EXPRESS := false
