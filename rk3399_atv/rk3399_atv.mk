@@ -16,7 +16,6 @@
 
 # First lunching is Q, api_level is 29
 PRODUCT_SHIPPING_API_LEVEL := 29
-PRODUCT_FSTAB_TEMPLATE := $(LOCAL_PATH)/fstab.in
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 PRODUCT_BOOT_DEVICE := fe330000.sdhci
 
