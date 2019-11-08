@@ -130,6 +130,7 @@ BOARD_SUPPORT_VP6 := false
 #for camera autofocus support
 CAMERA_SUPPORT_AUTOFOCUS=true
 
+DEVICE_MANIFEST_FILE := device/rockchip/$(TARGET_BOARD_PLATFORM)/manifest.xml
 # ANDROIDNN
 BOARD_USE_ANDROIDNN := false
 ifeq ($(strip $(BOARD_USE_ANDROIDNN)), true)
