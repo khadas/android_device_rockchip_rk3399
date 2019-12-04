@@ -38,6 +38,7 @@ PRODUCT_PACKAGES += \
 BUILD_WITH_GAPPS_CONFIG :=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.rotation.efull=true \
 	persist.hdmi.ui.state=2 \
 	persist.sys.rotation.einit=3 \
     vendor.hwc.device.primary=HDMI-A,DP\
