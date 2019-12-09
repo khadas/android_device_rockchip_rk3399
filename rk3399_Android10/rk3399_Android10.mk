@@ -16,6 +16,7 @@
 
 # First lunching is Q, api_level is 29
 PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_FSTAB_TEMPLATE := $(LOCAL_PATH)/fstab.in
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 PRODUCT_BOOT_DEVICE := fe330000.sdhci
 include device/rockchip/common/build/rockchip/DynamicPartitions.mk
@@ -25,6 +26,9 @@ include device/rockchip/rk3399/rk3399_Android10/BoardConfig.mk
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/rockchip/rk3399/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
+
+#enable this for support f2fs with data partion
+BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := ext4
 
 PRODUCT_CHARACTERISTICS := tablet
 
