@@ -5,15 +5,6 @@
     bootargs_ext = "androidboot.boot_devices=${_boot_device}";
 };
 
-&firmware_android {
-    vbmeta {
-        status = "disabled";
-    };
-    fstab {
-        status = "disabled";
-    };
-};
-
 &reboot_mode {
     mode-bootloader = <0x5242C309>;
     mode-charge = <0x5242C30B>;
