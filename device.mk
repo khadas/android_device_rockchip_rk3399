@@ -49,6 +49,40 @@ PRODUCT_COPY_FILES += \
     device/rockchip/rk3399/package_performance.xml:$(TARGET_COPY_OUT_ODM)/etc/package_performance.xml \
     device/rockchip/$(TARGET_BOARD_PLATFORM)/media_profiles_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml
 
+#
+## setup boot-shutdown animation configs.
+#
+HAVE_BOOT_ANIMATION := $(shell test -f $(TARGET_DEVICE_DIR)/bootanimation.zip && echo true)
+HAVE_SHUTDOWN_ANIMATION := $(shell test -f $(TARGET_DEVICE_DIR)/shutdownanimation.zip && echo true)
+
+ifeq ($(HAVE_BOOT_ANIMATION), true)
+PRODUCT_COPY_FILES += $(TARGET_DEVICE_DIR)/bootanimation.zip:$(TARGET_COPY_OUT_ODM)/media/bootanimation.zip
+endif
+
+ifeq ($(HAVE_SHUTDOWN_ANIMATION), true)
+PRODUCT_COPY_FILES += $(TARGET_DEVICE_DIR)/shutdownanimation.zip:$(TARGET_COPY_OUT_ODM)/media/shutdownanimation.zip
+endif
+
+#
+## setup oem-content configs.
+#
+HAVE_PRESET_CONTENT := $(shell test -d $(TARGET_DEVICE_DIR)/pre_set && echo true)
+HAVE_PRESET_DEL_CONTENT := $(shell test -d $(TARGET_DEVICE_DIR)/pre_set_del && echo true)
+
+ifeq ($(HAVE_PRESET_DEL_CONTENT), true)
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(TARGET_DEVICE_DIR)/pre_set_del,$(TARGET_COPY_OUT_ODM)/pre_set_del)
+
+PRODUCT_PROPERTY_OVERRIDES += ro.boot.copy_oem=true
+endif
+
+ifeq ($(HAVE_PRESET_CONTENT), true)
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(TARGET_DEVICE_DIR)/pre_set,$(TARGET_COPY_OUT_ODM)/pre_set)
+
+PRODUCT_PROPERTY_OVERRIDES += ro.boot.copy_oem=true
+endif
+
 ifeq ($(strip $(BOARD_USE_ANDROIDNN)), true)
 # ARMNN
 PRODUCT_COPY_FILES += \
