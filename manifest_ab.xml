@@ -220,5 +220,44 @@
         </interface>
     </hal>
 
+    <hal format="hidl">
+        <name>rockchip.hardware.outputmanager</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IRkOutputManager</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IRkOutputManager/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>android.hardware.tv.cec</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IHdmiCec</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IHdmiCec/default</fqname>
+    </hal>
+	
+	<hal format="hidl">
+		<name>android.hardware.radio</name>
+		<transport>hwbinder</transport>
+		<version>1.2</version>
+		<interface>
+			<name>IRadio</name>
+		<instance>slot1</instance>
+		</interface>
+	</hal>
+	<hal format="hidl">
+		<name>android.hardware.radio.deprecated</name>
+		<transport>hwbinder</transport>
+		<version>1.0</version>
+		<interface>
+			<name>IOemHook</name>
+			<instance>slot1</instance>
+		</interface>
+	</hal>
 </manifest>
 
