@@ -36,7 +36,7 @@ PRODUCT_KERNEL_ARCH := arm64
 TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
 BOARD_PREBUILT_DTBIMAGE_DIR := kernel/arch/arm64/boot/dts/rockchip
 PRODUCT_KERNEL_DTS ?= rk3399-sapphire-excavator-edp-avb
-PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig android-10.config
+PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig android-10.config rk3399.config
 PRODUCT_UBOOT_CONFIG ?= rk3399
 
 SF_PRIMARY_DISPLAY_ORIENTATION := 0
