@@ -71,4 +71,5 @@
     </string-array>
     <bool name="config_supportsSplitScreenMultiWindow">false</bool>
     <bool name="config_enableAutoPowerModes">false</bool>
+    <bool name="config_quickSettingsSupported">false</bool>
 </resources>
