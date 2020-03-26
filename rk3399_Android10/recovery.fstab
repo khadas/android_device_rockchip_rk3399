@@ -2,7 +2,7 @@
 #<src>                                       <mnt_point>         <type>    <mnt_flags and options>       <fs_mgr_flags>
 /dev/block/platform/fe330000.sdhci/by-name/user                  /mnt/internal_sd     vfat             defaults                  defaults
 /dev/block/mmcblk0p1                                               /mnt/external_sd     vfat             /dev/block/mmcblk0                  defaults
-/dev/block/by-name/system                /              ext4             defaults                  defaults
+/dev/block/by-name/system                /system              ext4             defaults                  defaults
 /dev/block/by-name/vendor                /vendor              ext4             defaults                  defaults
 /dev/block/by-name/odm                   /odm                 ext4             defaults                  defaults
 /dev/block/by-name/cache                 /cache               ext4             defaults                  defaults
@@ -23,3 +23,4 @@
 /dev/block/by-name/baseparamer           /baseparamer         emmc             defaults                  defaults
 /dev/block/by-name/frp                   /frp                 emmc             defaults                  defaults
 /dev/block/by-name/vbmeta                /vbmeta              emmc             defaults                  defaults
+/dev/block/by-name/dtbo                /dtbo              emmc             defaults                  defaults
