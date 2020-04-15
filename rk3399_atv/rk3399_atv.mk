@@ -39,3 +39,6 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 ## add Rockchip properties
 #
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=280
+
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_PREBUILT_DTBIMAGE_DIR := kernel/arch/arm64/boot/dts/rockchip

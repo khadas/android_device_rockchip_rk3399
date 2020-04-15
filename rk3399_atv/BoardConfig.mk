@@ -37,3 +37,4 @@ DEVICE_MANIFEST_FILE := $(TARGET_DEVICE_DIR)/manifest.xml
 
 
 PRODUCT_KERNEL_CONFIG := rockchip_defconfig android-10.config
+BOARD_AVB_ENABLE := true
