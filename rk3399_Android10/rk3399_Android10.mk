@@ -62,7 +62,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
    service.adb.tcp.port=5555
-   
+
+# bootanimation
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bootanimation.zip:product/media/bootanimation.zip   
 #Factory test
 PRODUCT_PACKAGES += \
    FactoryTest
