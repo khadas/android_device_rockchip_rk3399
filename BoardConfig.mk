@@ -35,9 +35,9 @@ TARGET_2ND_CPU_VARIANT := cortex-a15
 PRODUCT_KERNEL_ARCH := arm64
 TARGET_PREBUILT_KERNEL := kernel/arch/arm64/boot/Image
 BOARD_PREBUILT_DTBIMAGE_DIR := kernel/arch/arm64/boot/dts/rockchip
-PRODUCT_KERNEL_DTS ?= rk3399-sapphire-excavator-edp-avb
-PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig android-10.config rk3399.config
-PRODUCT_UBOOT_CONFIG ?= rk3399
+PRODUCT_KERNEL_DTS ?= rk3399-khadas-edge-android
+PRODUCT_KERNEL_CONFIG ?= kedge_defconfig android-10.config rk3399.config
+PRODUCT_UBOOT_CONFIG ?= kedge
 
 SF_PRIMARY_DISPLAY_ORIENTATION := 0
 

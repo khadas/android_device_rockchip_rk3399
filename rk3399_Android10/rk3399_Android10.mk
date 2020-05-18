@@ -36,12 +36,21 @@ PRODUCT_NAME := rk3399_Android10
 PRODUCT_DEVICE := rk3399_Android10
 PRODUCT_BRAND := rockchip
 PRODUCT_MODEL := rk3399-Android10
-PRODUCT_MANUFACTURER := rockchip
+PRODUCT_MANUFACTURER := Khadas
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PACKAGES += \
     SoundRecorder
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.display.id=Edge_Qt_$(BUILD_NUMBER)
+   
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.sys.rotation.efull=true \
+	persist.hdmi.ui.state=2 \
+	persist.sys.rotation.einit=3 \
+    vendor.hwc.device.primary=HDMI-A,DP \
+    vendor.hwc.device.extend=DSI
 # Get the long list of APNs
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/spn-conf.xml
@@ -50,4 +59,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.ota.host = www.rockchip.com:2300 \
     ro.sf.lcd_density=280
 
+PRODUCT_PROPERTY_OVERRIDES += \
+   service.adb.tcp.port=5555
+   
+#Factory test
+PRODUCT_PACKAGES += \
+   FactoryTest
+   
 #PRODUCT_HAVE_OPTEE := true
