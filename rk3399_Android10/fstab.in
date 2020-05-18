@@ -19,3 +19,4 @@ ${_block_prefix}product /product  ext4 ro,barrier=1 ${_flags},first_stage_mount
 #/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,fsync_mode=nobarrier latemount,wait,check,fileencryption=software,quota,formattable,reservedsize=128M,checkpoint=fs
 # for ext4
 /dev/block/by-name/userdata    /data      ext4    discard,noatime,nosuid,nodev,noauto_da_alloc,data=ordered,user_xattr,barrier=1    latemount,wait,formattable,check,fileencryption=software,quota,reservedsize=128M,checkpoint=block
+/devices/platform/*.pcie*                     auto                   auto      defaults                                                               voldmanaged=nvme:auto

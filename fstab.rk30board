@@ -16,3 +16,4 @@
 /devices/platform/fe320000.dwmmc/mmc_host*        auto  auto    defaults        voldmanaged=sdcard1:auto
 # Full disk encryption has less effect on rk3399, so default to enable this.
 /dev/block/by-name/userdata       /data               f2fs      noatime,nodiratime,nosuid,nodev,discard,inline_xattr                   wait,check,notrim,forceencrypt=/cache/key_file,quota,reservedsize=128M
+/devices/platform/*.pcie*                     auto                   auto      defaults                                                               voldmanaged=nvme:auto
