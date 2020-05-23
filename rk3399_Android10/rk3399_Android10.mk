@@ -69,5 +69,9 @@ PRODUCT_COPY_FILES += \
 #Factory test
 PRODUCT_PACKAGES += \
    FactoryTest
-   
+
+BUILD_WITH_GAPPS_CONFIG :=false
+ifeq ($(BUILD_WITH_GAPPS_CONFIG),true)
+$(call inherit-product-if-exists, vendor/rockchip/google/gapps.mk)
+endif  
 #PRODUCT_HAVE_OPTEE := true
