@@ -47,7 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
    
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.rotation.efull=true \
-	persist.hdmi.ui.state=2 \
+	persist.vendor.sys.hdmiui=1 \
 	persist.sys.rotation.einit=3 \
 	persist.sys.app.rotation=force_land \
     vendor.hwc.device.primary=HDMI-A,DP \
