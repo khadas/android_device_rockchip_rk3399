@@ -70,6 +70,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
    FactoryTest
 
+#i2c tools
+PRODUCT_PACKAGES += \
+   i2cget \
+   i2cset \
+   i2cdump \
+   i2cdetect
+   
 BUILD_WITH_GAPPS_CONFIG :=false
 ifeq ($(BUILD_WITH_GAPPS_CONFIG),true)
 $(call inherit-product-if-exists, vendor/rockchip/google/gapps.mk)
