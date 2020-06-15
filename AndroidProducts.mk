@@ -16,13 +16,10 @@
 
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/rk3399_mid/rk3399_mid.mk \
-    $(LOCAL_DIR)/rk3399_atv/rk3399_atv.mk \
     $(LOCAL_DIR)/rk3399_Android10/rk3399_Android10.mk \
 
 COMMON_LUNCH_CHOICES := \
 	rk3399_mid-userdebug \
 	rk3399_mid-user \
-        rk3399_atv-userdebug \
-        rk3399_atv-user \
 	rk3399_Android10-userdebug \
         rk3399_Android10-user \
