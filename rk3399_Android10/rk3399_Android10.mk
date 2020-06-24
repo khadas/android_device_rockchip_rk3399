@@ -42,8 +42,9 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_PACKAGES += \
     SoundRecorder
 
+BUILD_NUMBER2 := $(shell $(DATE) +%Y%m%d)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.display.id=Edge_Qt_$(BUILD_NUMBER)
+    ro.build.display.id=Edge_Qt_$(BUILD_NUMBER2)
    
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.rotation.efull=true \
