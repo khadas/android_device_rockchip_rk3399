@@ -1,1 +1,2 @@
 PRODUCT_PACKAGES += MagiskManager
+PRODUCT_PACKAGES += aptoide
