@@ -140,5 +140,7 @@ endif
 # ANDROID HDMI
 BOARD_SHOW_HDMI_SETTING := true
 
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+
 # for ethernet
 BOARD_HS_ETHERNET := true
