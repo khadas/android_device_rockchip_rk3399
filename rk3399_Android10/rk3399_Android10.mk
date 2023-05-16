@@ -49,11 +49,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.rotation.efull=true \
 	persist.vendor.sys.hdmiui=1 \
-	persist.sys.rotation.einit=3 \
 	persist.sys.app.rotation=force_land \
 	sys.magisk.adb.root=1 \
-    vendor.hwc.device.primary=HDMI-A,DP \
-    vendor.hwc.device.extend=DSI
 # Get the long list of APNs
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/spn-conf.xml
