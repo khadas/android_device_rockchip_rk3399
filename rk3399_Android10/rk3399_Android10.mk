@@ -44,7 +44,7 @@ PRODUCT_PACKAGES += \
 
 BUILD_NUMBER2 := $(shell $(DATE) +%Y%m%d)
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.display.id=Edge_Qt_$(BUILD_NUMBER2)
+    ro.build.display.id=Edge-Android-10-$(BUILD_NUMBER2)
    
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.rotation.efull=true \
